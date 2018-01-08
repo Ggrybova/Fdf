@@ -1,0 +1,2 @@
+# Fdf
+fdf (which stand for "fil de fer" in French or Wire frame) is the first graphic project in 42 using minilibx. The program take a map as arguments which content different number as their height and render it in 3D. Mandatory part is just rendering and expose hook. All the other features are bonus. Several options are available: zoom and unzoom, move the map on the 3D space, rotate the map (on the three axes of rotation)
