@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ggrybova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/24 09:41:52 by ggrybova          #+#    #+#             */
-/*   Updated: 2016/11/28 14:53:34 by ggrybova         ###   ########.fr       */
+/*   Created: 2017/06/07 10:57:54 by ggrybova          #+#    #+#             */
+/*   Updated: 2017/06/07 16:56:44 by ggrybova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "fdf.h"
 
-size_t	ft_strlen(const char *s)
+int			main(int argc, char **argv)
 {
-	int i;
+	t_mlx	*map;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	if (argc != 2)
+	{
+		ft_putstr("usage: ./fdf map_file\n");
+		exit(0);
+	}
+	map = (t_mlx *)malloc(sizeof(t_mlx));
+	read_map(map, argv[1]);
+	create_map(map);
+	return (1);
 }
